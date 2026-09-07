@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        request.auth.token.email.lower() == 'rusdiishak82@admin.smp.belajar.id' ||
+        request.auth.token.email == 'rusdiishak82@admin.smp.belajar.id'
+      );
+    }
+
+    // User profiles & Login logs
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (isOwner(userId) || isAdmin());
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    // School profile & config
+    match /school_profile/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Galleries
+    match /galleries/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Achievements
+    match /achievements/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Messages / PPDB Registrations
+    match /messages/{messageId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if true;
+    }
+  }
+}

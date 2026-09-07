@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "UserProfile": {
+      "fields": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string" },
+        "lastLoginAt": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "SchoolProfile": {
+      "fields": {
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "npsn": { "type": "string" },
+        "accreditation": { "type": "string" },
+        "address": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "mapEmbedUrl": { "type": "string" },
+        "vision": { "type": "string" },
+        "missions": { "type": "array" }
+      }
+    },
+    "Gallery": {
+      "fields": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string" },
+        "createdBy": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Message": {
+      "fields": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "message": { "type": "string" },
+        "photoData": { "type": "string" },
+        "userId": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "Achievement": {
+      "fields": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "winner": { "type": "string" },
+        "level": { "type": "string" },
+        "year": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "portfolio",
+  "description": "Website portfolio resmi SMP MEFENG di Desa Sumber Makmur Kec Gane Timur Kab Halmahera Selatan Maluku Utara, dilengkapi HTML5, CSS Grid/Flex, navigasi Beranda, Profil, Galeri, Kontak & Peta, Modal pesan terintegrasi Firebase Firestore dan Autentikasi Google.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
